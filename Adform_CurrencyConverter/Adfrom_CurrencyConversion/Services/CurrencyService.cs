@@ -75,7 +75,7 @@ namespace Adfrom_CurrencyConversion.Services
                         CurrencyCode = x.Attribute("code").Value,
                         CurrencyDesc = x.Attribute("desc").Value,
                         Rate = Math.Round(decimal.Parse(x.Attribute("rate").Value, CultureInfo.InvariantCulture) / inrRate , 2),
-                        DateTime = DateTime.Now.ToString("yyyy-MMM-dd hh:mm:ss:ff tt")
+                        DateTime = DateTime.UtcNow.ToString("yyyy-MMM-dd hh:mm:ss:ff tt")
                     }).ToList();
 
                 // Adding DKK manually with its rate as INR per DKK
@@ -84,7 +84,7 @@ namespace Adfrom_CurrencyConversion.Services
                     CurrencyCode = "DKK",
                     CurrencyDesc = "Danish Krone",
                     Rate = inrRate,
-                    DateTime = DateTime.Now.ToString("yyyy-MMM-dd hh:mm:ss:ff tt")
+                    DateTime = DateTime.UtcNow.ToString("yyyy-MMM-dd hh:mm:ss:ff tt")
                 });
 
                 return currencyRates;
@@ -180,31 +180,22 @@ namespace Adfrom_CurrencyConversion.Services
         }
 
         /// <summary>
-        /// Converts a given amount from one currency to another based on the latest exchange rates.
-        /// If the source and destination currencies are the same, the original amount is returned.
+        /// Converts a given amount from one currency to another based on exchange rates.
         /// </summary>
-        /// <param name="request">A <see cref="CurrencyConversionRequest"/> containing the source currency, target currency, and amount.</param>
-        /// <returns>A task representing the asynchronous operation, returning a <see cref="CurrencyConversionResponse"/> containing the converted amount.</returns>
-        /// <exception cref="ArgumentException">Thrown if an invalid currency code is provided.</exception>
-        /// <exception cref="Exception">Thrown if an unexpected error occurs during the conversion process.</exception>
+        /// <param name="request">The currency conversion request containing the source and target currencies and the amount.</param>
+        /// <returns>A response containing the converted amount and details of the conversion.</returns>
+        /// <exception cref="ArgumentException">Thrown if the source and destination currencies are the same or invalid.</exception>
+        /// <exception cref="Exception">Logs and rethrows any unexpected errors.</exception>
         public async Task<CurrencyConversionResponse> ConvertCurrencyAsync(CurrencyConversionRequest request)
         {
             try
             {
                 _logger.Info("Converting currency...");
 
-                // If the source and destination currencies are the same, return the original amount
+                // Check if source and destination currencies are the same
                 if (request.FromCurrencyCode == request.ToCurrencyCode)
                 {
-                    return new CurrencyConversionResponse
-                    {
-                        FromCurrencyCode = request.FromCurrencyCode,
-                        FromCurrencyDesc = "Same currency",
-                        ToCurrencyCode = request.ToCurrencyCode,
-                        ToCurrencyDesc = "Same currency",
-                        OriginalAmount = request.Amount,
-                        ConvertedAmount = request.Amount
-                    };
+                    throw new ArgumentException("FromCurrencyCode and ToCurrencyCode can't be same.");
                 }
 
                 // Load exchange rates from file
@@ -240,5 +231,6 @@ namespace Adfrom_CurrencyConversion.Services
             }
         }
 
+        
     }
 }

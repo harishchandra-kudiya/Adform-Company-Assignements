@@ -15,5 +15,6 @@ namespace Adfrom_CurrencyConversion.Interfaces
 
         // This method will convert the currency based on the given request.
         Task<CurrencyConversionResponse> ConvertCurrencyAsync(CurrencyConversionRequest request);
+
     }
 }

@@ -1,162 +1,139 @@
-2025-03-22 19:14:18,260 [1] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
-2025-03-22 19:14:18,283 [1] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 19:14:18,293 [1] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 19:14:19,224 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7244
-2025-03-22 19:14:19,225 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5204
-2025-03-22 19:14:19,302 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2025-03-22 19:14:19,302 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2025-03-22 19:14:19,303 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\
-2025-03-22 19:14:20,036 [7] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 1737.5618ms - 200
-2025-03-22 19:14:20,038 [7] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 1759.4658ms - 200
-2025-03-22 19:14:21,346 [7] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
-2025-03-22 19:14:21,386 [7] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
-2025-03-22 19:14:21,388 [7] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
-2025-03-22 19:14:21,440 [7] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
-2025-03-22 19:14:21,440 [7] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
-2025-03-22 19:14:35,838 [6] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency rates from file...
-2025-03-22 19:16:21,443 [22] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
-2025-03-22 19:16:21,444 [22] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 19:16:21,444 [22] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 19:16:22,372 [20] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 928.4757ms - 200
-2025-03-22 19:16:22,373 [20] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 928.7838ms - 200
-2025-03-22 19:16:22,373 [20] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
-2025-03-22 19:16:22,373 [20] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
-2025-03-22 19:16:22,373 [20] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
-2025-03-22 19:16:22,385 [22] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
-2025-03-22 19:16:22,385 [22] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
-2025-03-22 20:17:56,217 [1] INFO  CurrencyRateUpdaterService - Currency Rate Updater Service started.
-2025-03-22 20:17:56,231 [1] INFO  CurrencyRateUpdaterService - Fetching latest currency exchange rates...
-2025-03-22 20:17:56,232 [1] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
-2025-03-22 20:17:56,244 [1] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:17:56,248 [1] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:17:56,588 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7244
-2025-03-22 20:17:56,588 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5204
-2025-03-22 20:17:56,694 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2025-03-22 20:17:56,694 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2025-03-22 20:17:56,695 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\
-2025-03-22 20:17:57,379 [8] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 1125.8153ms - 200
-2025-03-22 20:17:57,380 [8] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 1143.7751ms - 200
-2025-03-22 20:17:57,612 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
-2025-03-22 20:17:57,625 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
-2025-03-22 20:17:57,628 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
-2025-03-22 20:17:57,686 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
-2025-03-22 20:17:57,686 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
-2025-03-22 20:17:57,686 [8] INFO  CurrencyRateUpdaterService - Successfully updated currency exchange rates.
-2025-03-22 20:17:57,686 [8] INFO  CurrencyRateUpdaterService - Waiting for 60 minutes before the next update.
-2025-03-22 20:18:12,049 [16] INFO  Adfrom_CurrencyConversion.Controllers.CurrencyController - Fetching latest currency rates via API...
-2025-03-22 20:18:12,049 [16] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
-2025-03-22 20:18:12,049 [16] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:18:12,050 [16] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:18:12,062 [15] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 11.7098ms - 200
-2025-03-22 20:18:12,062 [15] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 12.8663ms - 200
-2025-03-22 20:18:12,062 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
-2025-03-22 20:18:12,063 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
-2025-03-22 20:18:12,063 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
-2025-03-22 20:18:12,070 [4] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
-2025-03-22 20:18:12,070 [4] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
-2025-03-22 20:18:12,074 [4] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency rates from file...
-2025-03-22 20:19:50,832 [1] INFO  CurrencyRateUpdaterService - Currency Rate Updater Service started.
-2025-03-22 20:19:50,843 [1] INFO  CurrencyRateUpdaterService - Fetching latest currency exchange rates...
-2025-03-22 20:19:50,844 [1] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
-2025-03-22 20:19:50,853 [1] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:19:50,858 [1] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:19:51,146 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7244
-2025-03-22 20:19:51,146 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5204
-2025-03-22 20:19:51,208 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2025-03-22 20:19:51,209 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2025-03-22 20:19:51,209 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\
-2025-03-22 20:19:52,203 [8] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 1340.5752ms - 200
-2025-03-22 20:19:52,204 [8] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 1355.7973ms - 200
-2025-03-22 20:19:52,236 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
-2025-03-22 20:19:52,240 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
-2025-03-22 20:19:52,242 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
-2025-03-22 20:19:52,267 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
-2025-03-22 20:19:52,267 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
-2025-03-22 20:19:52,268 [8] INFO  CurrencyRateUpdaterService - Successfully updated currency exchange rates.
-2025-03-22 20:19:52,268 [8] INFO  CurrencyRateUpdaterService - Waiting for 60 minutes before the next update.
-2025-03-22 20:19:59,642 [4] INFO  Adfrom_CurrencyConversion.Controllers.CurrencyController - Fetching latest currency rates via API...
-2025-03-22 20:19:59,643 [4] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
-2025-03-22 20:19:59,643 [4] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:19:59,644 [4] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:19:59,652 [13] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 8.6247ms - 200
-2025-03-22 20:19:59,652 [13] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 9.7422ms - 200
-2025-03-22 20:19:59,652 [13] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
-2025-03-22 20:19:59,653 [13] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
-2025-03-22 20:19:59,653 [13] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
-2025-03-22 20:19:59,663 [9] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
-2025-03-22 20:19:59,663 [9] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
-2025-03-22 20:19:59,664 [9] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency rates from file...
-2025-03-22 20:21:34,240 [1] INFO  CurrencyRateUpdaterService - Currency Rate Updater Service started.
-2025-03-22 20:21:34,251 [1] INFO  CurrencyRateUpdaterService - Fetching latest currency exchange rates...
-2025-03-22 20:21:34,252 [1] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
-2025-03-22 20:21:34,261 [1] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:21:34,266 [1] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:21:34,642 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7244
-2025-03-22 20:21:34,642 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5204
-2025-03-22 20:21:34,703 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2025-03-22 20:21:34,704 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2025-03-22 20:21:34,704 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\
-2025-03-22 20:21:35,429 [15] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 1159.8855ms - 200
-2025-03-22 20:21:35,430 [15] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 1174.561ms - 200
-2025-03-22 20:21:35,568 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
-2025-03-22 20:21:35,580 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
-2025-03-22 20:21:35,585 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
-2025-03-22 20:21:35,622 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
-2025-03-22 20:21:35,622 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
-2025-03-22 20:21:35,622 [15] INFO  CurrencyRateUpdaterService - Successfully updated currency exchange rates.
-2025-03-22 20:21:35,622 [15] INFO  CurrencyRateUpdaterService - Waiting for 60 minutes before the next update.
-2025-03-22 20:21:44,759 [16] INFO  Adfrom_CurrencyConversion.Controllers.CurrencyController - Fetching latest currency rates via API...
-2025-03-22 20:21:44,761 [16] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
-2025-03-22 20:21:44,761 [16] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:21:44,763 [16] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:21:44,783 [15] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 19.9474ms - 200
-2025-03-22 20:21:44,784 [15] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 22.2614ms - 200
-2025-03-22 20:21:44,784 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
-2025-03-22 20:21:44,784 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
-2025-03-22 20:21:44,784 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
-2025-03-22 20:21:44,834 [9] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
-2025-03-22 20:21:44,834 [9] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
-2025-03-22 20:21:44,836 [9] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency rates from file...
-2025-03-22 20:23:52,170 [8] INFO  Adfrom_CurrencyConversion.Controllers.CurrencyController - Fetching latest currency rates via API...
-2025-03-22 20:23:52,170 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
-2025-03-22 20:23:52,170 [8] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:23:52,170 [8] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:23:53,006 [20] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 835.5607ms - 200
-2025-03-22 20:23:53,006 [20] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 836.1082ms - 200
-2025-03-22 20:23:53,006 [20] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
-2025-03-22 20:23:53,007 [20] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
-2025-03-22 20:23:53,007 [20] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
-2025-03-22 20:23:53,015 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
-2025-03-22 20:23:53,015 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
-2025-03-22 20:23:53,015 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency rates from file...
-2025-03-22 20:25:29,326 [1] INFO  CurrencyRateUpdaterService - Currency Rate Updater Service started.
-2025-03-22 20:25:29,341 [1] INFO  CurrencyRateUpdaterService - Fetching latest currency exchange rates...
-2025-03-22 20:25:29,342 [1] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
-2025-03-22 20:25:29,357 [1] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:25:29,365 [1] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:25:30,156 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7244
-2025-03-22 20:25:30,157 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5204
-2025-03-22 20:25:30,422 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
-2025-03-22 20:25:30,423 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
-2025-03-22 20:25:30,423 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\
-2025-03-22 20:25:30,739 [7] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 1370.0217ms - 200
-2025-03-22 20:25:30,740 [7] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 1392.8557ms - 200
-2025-03-22 20:25:30,828 [7] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
-2025-03-22 20:25:30,832 [7] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
-2025-03-22 20:25:30,870 [7] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
-2025-03-22 20:25:30,913 [7] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
-2025-03-22 20:25:30,913 [7] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
-2025-03-22 20:25:30,913 [7] INFO  CurrencyRateUpdaterService - Successfully updated currency exchange rates.
-2025-03-22 20:25:30,913 [7] INFO  CurrencyRateUpdaterService - Waiting for 60 minutes before the next update.
-2025-03-22 20:25:41,154 [4] INFO  Adfrom_CurrencyConversion.Controllers.CurrencyController - Fetching latest currency rates via API...
-2025-03-22 20:25:41,154 [4] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
-2025-03-22 20:25:41,154 [4] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:25:41,156 [4] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
-2025-03-22 20:25:41,165 [13] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 9.4214ms - 200
-2025-03-22 20:25:41,165 [13] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 11.135ms - 200
-2025-03-22 20:25:41,166 [13] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
-2025-03-22 20:25:41,166 [13] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
-2025-03-22 20:25:41,166 [13] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
-2025-03-22 20:25:41,174 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
-2025-03-22 20:25:41,174 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
-2025-03-22 20:25:41,176 [15] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency rates from file...
+2025-03-23 00:57:41,554 [1] INFO  CurrencyRateUpdaterService - Currency Rate Updater Service started.
+2025-03-23 00:57:41,569 [1] INFO  CurrencyRateUpdaterService - Fetching latest currency exchange rates...
+2025-03-23 00:57:49,298 [1] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
+2025-03-23 00:57:49,322 [1] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 00:57:49,332 [1] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 00:57:49,827 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7244
+2025-03-23 00:57:49,827 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5204
+2025-03-23 00:57:49,899 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-03-23 00:57:49,900 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-03-23 00:57:49,900 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\
+2025-03-23 00:57:50,830 [8] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 1492.4034ms - 200
+2025-03-23 00:57:50,831 [8] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 1519.8942ms - 200
+2025-03-23 00:57:50,891 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
+2025-03-23 00:57:50,898 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
+2025-03-23 00:57:50,914 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
+2025-03-23 00:57:50,931 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
+2025-03-23 00:57:50,931 [8] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
+2025-03-23 00:57:50,932 [8] INFO  CurrencyRateUpdaterService - Successfully updated currency exchange rates.
+2025-03-23 00:57:50,932 [8] INFO  CurrencyRateUpdaterService - Waiting for 60 minutes before the next update.
+2025-03-23 00:58:26,072 [9] INFO  Adfrom_CurrencyConversion.Controllers.CurrencyController - Getting Converted Currency Data for INR from  to .
+2025-03-23 00:58:26,073 [9] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Getting stored currency conversions...
+2025-03-23 00:58:26,074 [9] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency conversions from file...
+2025-03-23 00:58:26,186 [14] ERROR Adfrom_CurrencyConversion.Services.CurrencyService - Error while loading currency conversions from file
+System.Text.Json.JsonException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at Adfrom_CurrencyConversion.Services.CurrencyService.LoadConversionsFromFileAsync() in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Services\CurrencyService.cs:line 290
+2025-03-23 00:58:26,389 [14] ERROR Adfrom_CurrencyConversion.Services.CurrencyService - Error while getting stored currency conversions
+System.Text.Json.JsonException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at Adfrom_CurrencyConversion.Services.CurrencyService.LoadConversionsFromFileAsync() in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Services\CurrencyService.cs:line 290
+   at Adfrom_CurrencyConversion.Services.CurrencyService.GetStoredConversionsAsync(String fromCurrency, Nullable`1 startDate, Nullable`1 endDate) in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Services\CurrencyService.cs:line 312
+2025-03-23 00:58:26,474 [14] ERROR Adfrom_CurrencyConversion.Controllers.CurrencyController - Error while retrieving stored conversions
+System.Text.Json.JsonException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at Adfrom_CurrencyConversion.Services.CurrencyService.LoadConversionsFromFileAsync() in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Services\CurrencyService.cs:line 290
+   at Adfrom_CurrencyConversion.Services.CurrencyService.GetStoredConversionsAsync(String fromCurrency, Nullable`1 startDate, Nullable`1 endDate) in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Services\CurrencyService.cs:line 312
+   at Adfrom_CurrencyConversion.Controllers.CurrencyController.GetStoredConversions(String fromCurrency, Nullable`1 startDate, Nullable`1 endDate) in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Controllers\CurrencyController.cs:line 100
+2025-03-23 01:00:25,321 [18] INFO  Adfrom_CurrencyConversion.Controllers.CurrencyController - Fetching latest currency rates via API...
+2025-03-23 01:00:25,321 [18] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Fetching latest currency rates...
+2025-03-23 01:00:25,321 [18] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 01:00:25,323 [18] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 01:00:26,703 [23] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 1380.043ms - 200
+2025-03-23 01:00:26,703 [23] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 1382.0943ms - 200
+2025-03-23 01:00:26,703 [23] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Parsing an XML content...
+2025-03-23 01:00:26,704 [23] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
+2025-03-23 01:00:26,704 [23] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Saving currency rates to file...
+2025-03-23 01:00:26,731 [25] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully saved currency rates to file.
+2025-03-23 01:00:26,732 [25] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Successfully fetched and saved currency rates.
+2025-03-23 01:00:26,737 [25] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency rates from file...
+2025-03-23 01:00:49,037 [24] INFO  Adfrom_CurrencyConversion.Controllers.CurrencyController - Converting 100 INR to USD.
+2025-03-23 01:00:49,040 [24] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Converting currency...
+2025-03-23 01:00:49,040 [24] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency rates from file...
+2025-03-23 01:00:49,047 [27] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency conversions from file...
+2025-03-23 01:00:49,137 [27] ERROR Adfrom_CurrencyConversion.Services.CurrencyService - Error while loading currency conversions from file
+System.Text.Json.JsonException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at Adfrom_CurrencyConversion.Services.CurrencyService.LoadConversionsFromFileAsync() in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Services\CurrencyService.cs:line 290
+2025-03-23 01:00:49,250 [27] ERROR Adfrom_CurrencyConversion.Services.CurrencyService - Error while converting currency
+System.Text.Json.JsonException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at Adfrom_CurrencyConversion.Services.CurrencyService.LoadConversionsFromFileAsync() in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Services\CurrencyService.cs:line 290
+   at Adfrom_CurrencyConversion.Services.CurrencyService.ConvertCurrencyAsync(CurrencyConversionRequest request) in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Services\CurrencyService.cs:line 231
+2025-03-23 01:00:49,320 [27] ERROR Adfrom_CurrencyConversion.Controllers.CurrencyController - Unexpected error during currency conversion from INR to USD
+System.Text.Json.JsonException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at Adfrom_CurrencyConversion.Services.CurrencyService.LoadConversionsFromFileAsync() in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Services\CurrencyService.cs:line 290
+   at Adfrom_CurrencyConversion.Services.CurrencyService.ConvertCurrencyAsync(CurrencyConversionRequest request) in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Services\CurrencyService.cs:line 231
+   at Adfrom_CurrencyConversion.Controllers.CurrencyController.ConvertCurrency(CurrencyConversionRequest request) in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Controllers\CurrencyController.cs:line 78
+2025-03-23 01:01:24,808 [24] INFO  Adfrom_CurrencyConversion.Controllers.CurrencyController - Converting 100 INR to USD.
+2025-03-23 01:01:29,414 [24] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Converting currency...
+2025-03-23 01:01:30,448 [24] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency rates from file...
+2025-03-23 01:01:36,643 [18] INFO  Adfrom_CurrencyConversion.Services.CurrencyService - Loading currency conversions from file...
+2025-03-23 01:01:36,699 [9] ERROR Adfrom_CurrencyConversion.Services.CurrencyService - Error while loading currency conversions from file
+System.Text.Json.JsonException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. Path: $ | LineNumber: 0 | BytePositionInLine: 0.
+ ---> System.Text.Json.JsonReaderException: The input does not contain any JSON tokens. Expected the input to start with a valid JSON token, when isFinalBlock is true. LineNumber: 0 | BytePositionInLine: 0.
+   at System.Text.Json.ThrowHelper.ThrowJsonReaderException(Utf8JsonReader& json, ExceptionResource resource, Byte nextByte, ReadOnlySpan`1 bytes)
+   at System.Text.Json.Utf8JsonReader.Read()
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   --- End of inner exception stack trace ---
+   at System.Text.Json.ThrowHelper.ReThrowWithPath(ReadStack& state, JsonReaderException ex)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at Adfrom_CurrencyConversion.Services.CurrencyService.LoadConversionsFromFileAsync() in D:\Harish\Github\Company-Assignements\Adform_CurrencyConverter\Adfrom_CurrencyConversion\Services\CurrencyService.cs:line 290

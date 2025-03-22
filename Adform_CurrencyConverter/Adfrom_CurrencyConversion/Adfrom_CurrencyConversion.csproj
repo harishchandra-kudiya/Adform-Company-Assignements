@@ -10,12 +10,12 @@
     <PackageReference Include="log4net" Version="3.0.4" />
     <PackageReference Include="Log4net.Extensions.Logging" Version="1.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
+    <PackageReference Include="Moq" Version="4.20.72" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
+    <PackageReference Include="xunit" Version="2.9.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
-    <Folder Include="Logs\" />
     <Folder Include="Shared\" />
   </ItemGroup>
 

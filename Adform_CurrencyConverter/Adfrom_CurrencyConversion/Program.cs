@@ -9,14 +9,6 @@ using Microsoft.Extensions.DependencyInjection; // Add this using directive
 var builder = WebApplication.CreateBuilder(args);
 
 // Configure Log4Net
-//builder.Logging.ClearProviders();  // Remove default logging providers
-//builder.Logging.AddProvider(new Log4NetProvider("log4net.config")); // Use a custom Log4Net provider
-//var entryAssembly = Assembly.GetEntryAssembly() ?? throw new InvalidOperationException("Entry assembly cannot be null.");
-
-//var logRepository = LogManager.GetRepository(entryAssembly);
-//XmlConfigurator.Configure(logRepository, new FileInfo("log4net.config"));
-
-// Configure Log4Net
 builder.Logging.ClearProviders();
 builder.Logging.AddLog4Net("log4net.config");
 
