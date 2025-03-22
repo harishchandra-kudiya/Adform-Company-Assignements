@@ -5,6 +5,8 @@ namespace Adfrom_CurrencyConversion.Models
 {
     public class CurrencyConversionResponse
     {
+        //This class is used to return the response to the currency conversion request
+
         public string FromCurrencyCode { get; set; }
 
         public string? FromCurrencyDesc { get; set; }

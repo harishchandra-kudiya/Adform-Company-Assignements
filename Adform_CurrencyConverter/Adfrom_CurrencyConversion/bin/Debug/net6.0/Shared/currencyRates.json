@@ -2,187 +2,193 @@
   {
     "CurrencyCode": "AUD",
     "CurrencyDesc": "Australian dollars",
-    "Rate": 432.69,
-    "DateTime": "2025-03-22T07:09:56.2714389Z"
+    "Rate": 54.02,
+    "DateTime": "2025-03-22T20:23:53.0072199+05:30"
   },
   {
     "CurrencyCode": "BRL",
     "CurrencyDesc": "Brazilian real",
-    "Rate": 120.49,
-    "DateTime": "2025-03-22T07:09:56.2715428Z"
+    "Rate": 15.04,
+    "DateTime": "2025-03-22T20:23:53.0072237+05:30"
   },
   {
     "CurrencyCode": "BGN",
     "CurrencyDesc": "Bulgarian lev",
-    "Rate": 381.41,
-    "DateTime": "2025-03-22T07:09:56.271544Z"
+    "Rate": 47.62,
+    "DateTime": "2025-03-22T20:23:53.0072255+05:30"
   },
   {
     "CurrencyCode": "CAD",
     "CurrencyDesc": "Canadian dollars",
-    "Rate": 479.69,
-    "DateTime": "2025-03-22T07:09:56.2715449Z"
+    "Rate": 59.89,
+    "DateTime": "2025-03-22T20:23:53.0072269+05:30"
   },
   {
     "CurrencyCode": "CNY",
     "CurrencyDesc": "Chinese yuan renminbi",
-    "Rate": 95.05,
-    "DateTime": "2025-03-22T07:09:56.2715457Z"
+    "Rate": 11.87,
+    "DateTime": "2025-03-22T20:23:53.0072291+05:30"
   },
   {
     "CurrencyCode": "CZK",
     "CurrencyDesc": "Czech koruny",
-    "Rate": 29.86,
-    "DateTime": "2025-03-22T07:09:56.2715477Z"
+    "Rate": 3.73,
+    "DateTime": "2025-03-22T20:23:53.0072318+05:30"
   },
   {
     "CurrencyCode": "EUR",
     "CurrencyDesc": "Euro",
-    "Rate": 745.96,
-    "DateTime": "2025-03-22T07:09:56.2715486Z"
+    "Rate": 93.13,
+    "DateTime": "2025-03-22T20:23:53.0072339+05:30"
   },
   {
     "CurrencyCode": "HKD",
     "CurrencyDesc": "Hong Kong dollars",
-    "Rate": 88.63,
-    "DateTime": "2025-03-22T07:09:56.2715493Z"
+    "Rate": 11.06,
+    "DateTime": "2025-03-22T20:23:53.0072358+05:30"
   },
   {
     "CurrencyCode": "HUF",
     "CurrencyDesc": "Hungarian forints",
-    "Rate": 1.869,
-    "DateTime": "2025-03-22T07:09:56.2715501Z"
+    "Rate": 0.23,
+    "DateTime": "2025-03-22T20:23:53.0072377+05:30"
   },
   {
     "CurrencyCode": "ISK",
     "CurrencyDesc": "Icelandic kronur",
-    "Rate": 5.17,
-    "DateTime": "2025-03-22T07:09:56.2715511Z"
+    "Rate": 0.65,
+    "DateTime": "2025-03-22T20:23:53.0072403+05:30"
   },
   {
     "CurrencyCode": "INR",
     "CurrencyDesc": "Indian rupee",
-    "Rate": 8.01,
-    "DateTime": "2025-03-22T07:09:56.2715518Z"
+    "Rate": 1,
+    "DateTime": "2025-03-22T20:23:53.0072416+05:30"
   },
   {
     "CurrencyCode": "IDR",
     "CurrencyDesc": "Indonesian rupiah",
-    "Rate": 0.0417,
-    "DateTime": "2025-03-22T07:09:56.2715527Z"
+    "Rate": 0.01,
+    "DateTime": "2025-03-22T20:23:53.0072439+05:30"
   },
   {
     "CurrencyCode": "ILS",
     "CurrencyDesc": "Israeli shekel",
-    "Rate": 185.57,
-    "DateTime": "2025-03-22T07:09:56.2715535Z"
+    "Rate": 23.17,
+    "DateTime": "2025-03-22T20:23:53.0072455+05:30"
   },
   {
     "CurrencyCode": "JPY",
     "CurrencyDesc": "Japanese yen",
-    "Rate": 4.6336,
-    "DateTime": "2025-03-22T07:09:56.2715542Z"
+    "Rate": 0.58,
+    "DateTime": "2025-03-22T20:23:53.0072475+05:30"
   },
   {
     "CurrencyCode": "MYR",
     "CurrencyDesc": "Malaysian ringgit",
-    "Rate": 155.84,
-    "DateTime": "2025-03-22T07:09:56.2715549Z"
+    "Rate": 19.46,
+    "DateTime": "2025-03-22T20:23:53.0072495+05:30"
   },
   {
     "CurrencyCode": "MXN",
     "CurrencyDesc": "Mexican peso",
-    "Rate": 34.01,
-    "DateTime": "2025-03-22T07:09:56.2715557Z"
+    "Rate": 4.25,
+    "DateTime": "2025-03-22T20:23:53.0072514+05:30"
   },
   {
     "CurrencyCode": "NZD",
     "CurrencyDesc": "New Zealand dollars",
-    "Rate": 396.34,
-    "DateTime": "2025-03-22T07:09:56.2715564Z"
+    "Rate": 49.48,
+    "DateTime": "2025-03-22T20:23:53.0072533+05:30"
   },
   {
     "CurrencyCode": "NOK",
     "CurrencyDesc": "Norwegian kroner",
-    "Rate": 65.43,
-    "DateTime": "2025-03-22T07:09:56.2715572Z"
+    "Rate": 8.17,
+    "DateTime": "2025-03-22T20:23:53.0072555+05:30"
   },
   {
     "CurrencyCode": "PHP",
     "CurrencyDesc": "Philippine peso",
-    "Rate": 12.03,
-    "DateTime": "2025-03-22T07:09:56.2715579Z"
+    "Rate": 1.50,
+    "DateTime": "2025-03-22T20:23:53.0072573+05:30"
   },
   {
     "CurrencyCode": "PLN",
     "CurrencyDesc": "Polish zlotys",
-    "Rate": 177.51,
-    "DateTime": "2025-03-22T07:09:56.2715586Z"
+    "Rate": 22.16,
+    "DateTime": "2025-03-22T20:23:53.0072594+05:30"
   },
   {
     "CurrencyCode": "GBP",
     "CurrencyDesc": "Pounds sterling",
-    "Rate": 890.54,
-    "DateTime": "2025-03-22T07:09:56.2715594Z"
+    "Rate": 111.18,
+    "DateTime": "2025-03-22T20:23:53.007261+05:30"
   },
   {
     "CurrencyCode": "RON",
     "CurrencyDesc": "Romanian leu",
-    "Rate": 149.88,
-    "DateTime": "2025-03-22T07:09:56.2715601Z"
+    "Rate": 18.71,
+    "DateTime": "2025-03-22T20:23:53.0072629+05:30"
   },
   {
     "CurrencyCode": "XDR",
     "CurrencyDesc": "SDR (Calculated)",
-    "Rate": 915.90,
-    "DateTime": "2025-03-22T07:09:56.2715608Z"
+    "Rate": 114.34,
+    "DateTime": "2025-03-22T20:23:53.0072645+05:30"
   },
   {
     "CurrencyCode": "SGD",
     "CurrencyDesc": "Singapore dollars",
-    "Rate": 516.16,
-    "DateTime": "2025-03-22T07:09:56.2715617Z"
+    "Rate": 64.44,
+    "DateTime": "2025-03-22T20:23:53.0072664+05:30"
   },
   {
     "CurrencyCode": "ZAR",
     "CurrencyDesc": "South African rand",
-    "Rate": 37.90,
-    "DateTime": "2025-03-22T07:09:56.2715624Z"
+    "Rate": 4.73,
+    "DateTime": "2025-03-22T20:23:53.0072686+05:30"
   },
   {
     "CurrencyCode": "KRW",
     "CurrencyDesc": "South Korean won",
-    "Rate": 0.4705,
-    "DateTime": "2025-03-22T07:09:56.2715631Z"
+    "Rate": 0.06,
+    "DateTime": "2025-03-22T20:23:53.0072705+05:30"
   },
   {
     "CurrencyCode": "SEK",
     "CurrencyDesc": "Swedish kronor",
-    "Rate": 68.23,
-    "DateTime": "2025-03-22T07:09:56.2715638Z"
+    "Rate": 8.52,
+    "DateTime": "2025-03-22T20:23:53.0072723+05:30"
   },
   {
     "CurrencyCode": "CHF",
     "CurrencyDesc": "Swiss francs",
-    "Rate": 781.36,
-    "DateTime": "2025-03-22T07:09:56.2715646Z"
+    "Rate": 97.55,
+    "DateTime": "2025-03-22T20:23:53.0072744+05:30"
   },
   {
     "CurrencyCode": "THB",
     "CurrencyDesc": "Thai baht",
-    "Rate": 20.35,
-    "DateTime": "2025-03-22T07:09:56.2715655Z"
+    "Rate": 2.54,
+    "DateTime": "2025-03-22T20:23:53.0072761+05:30"
   },
   {
     "CurrencyCode": "TRY",
     "CurrencyDesc": "Turkish lira",
-    "Rate": 18.13,
-    "DateTime": "2025-03-22T07:09:56.2715662Z"
+    "Rate": 2.26,
+    "DateTime": "2025-03-22T20:23:53.0072781+05:30"
   },
   {
     "CurrencyCode": "USD",
     "CurrencyDesc": "US dollars",
-    "Rate": 688.98,
-    "DateTime": "2025-03-22T07:09:56.2715668Z"
+    "Rate": 86.01,
+    "DateTime": "2025-03-22T20:23:53.0072799+05:30"
+  },
+  {
+    "CurrencyCode": "DKK",
+    "CurrencyDesc": "Danish Krone",
+    "Rate": 8.01,
+    "DateTime": "2025-03-22T20:23:53.0072808+05:30"
   }
 ]
