@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\Adfrom_CurrencyConversion.props" />
+</Project>

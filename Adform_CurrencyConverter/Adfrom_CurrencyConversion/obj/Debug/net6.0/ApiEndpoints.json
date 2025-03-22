@@ -1,0 +1,49 @@
+[
+  {
+    "ContainingType": "Adfrom_CurrencyConversion.Controllers.CurrencyController",
+    "Method": "ConvertCurrency",
+    "RelativePath": "api/currency/convert",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Adfrom_CurrencyConversion.Models.CurrencyConversionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Adfrom_CurrencyConversion.Controllers.CurrencyController",
+    "Method": "GetLatestRates",
+    "RelativePath": "api/currency/fetch-all-latest-currency-rates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Adfrom_CurrencyConversion.Controllers.WeatherForecastController",
+    "Method": "Get",
+    "RelativePath": "WeatherForecast",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[Adfrom_CurrencyConversion.WeatherForecast, Adfrom_CurrencyConversion, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ],
+    "EndpointName": "GetWeatherForecast"
+  }
+]
