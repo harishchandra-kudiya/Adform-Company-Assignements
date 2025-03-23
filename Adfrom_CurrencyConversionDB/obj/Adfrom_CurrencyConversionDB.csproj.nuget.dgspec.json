@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Harish\\AdForm\\Project\\Adfrom_CurrencyConversionDB\\Adfrom_CurrencyConversionDB.csproj": {}
+    "D:\\Harish\\Github\\Company-Assignements\\Adfrom_CurrencyConversionDB\\Adfrom_CurrencyConversionDB.csproj": {}
   },
   "projects": {
-    "D:\\Harish\\AdForm\\Project\\Adfrom_CurrencyConversionDB\\Adfrom_CurrencyConversionDB.csproj": {
+    "D:\\Harish\\Github\\Company-Assignements\\Adfrom_CurrencyConversionDB\\Adfrom_CurrencyConversionDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Harish\\AdForm\\Project\\Adfrom_CurrencyConversionDB\\Adfrom_CurrencyConversionDB.csproj",
+        "projectUniqueName": "D:\\Harish\\Github\\Company-Assignements\\Adfrom_CurrencyConversionDB\\Adfrom_CurrencyConversionDB.csproj",
         "projectName": "Adfrom_CurrencyConversionDB",
-        "projectPath": "D:\\Harish\\AdForm\\Project\\Adfrom_CurrencyConversionDB\\Adfrom_CurrencyConversionDB.csproj",
+        "projectPath": "D:\\Harish\\Github\\Company-Assignements\\Adfrom_CurrencyConversionDB\\Adfrom_CurrencyConversionDB.csproj",
         "packagesPath": "C:\\Users\\91932\\.nuget\\packages\\",
-        "outputPath": "D:\\Harish\\AdForm\\Project\\Adfrom_CurrencyConversionDB\\obj\\",
+        "outputPath": "D:\\Harish\\Github\\Company-Assignements\\Adfrom_CurrencyConversionDB\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

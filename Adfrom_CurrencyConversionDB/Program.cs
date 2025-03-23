@@ -32,7 +32,20 @@ builder.Services.AddHostedService<CurrencyRateUpdaterService>();
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+builder.Services.AddSwaggerGen(options =>
+{
+    options.SwaggerDoc("v1", new Microsoft.OpenApi.Models.OpenApiInfo
+    {
+        Title = "Currency Conversion API",
+        Version = "v1",
+        Description = "API for fetching exchange rates, converting currencies, and storing conversion history.",
+        Contact = new Microsoft.OpenApi.Models.OpenApiContact
+        {
+            Name = "Harishchandra Kudiya",
+            Email = "kudiyaharishchandra@gmail.com"
+        }
+    });
+});
 
 var app = builder.Build();
 
@@ -40,7 +53,11 @@ var app = builder.Build();
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
-    app.UseSwaggerUI();
+    app.UseSwaggerUI(options =>
+    {
+        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Currency Conversion API v1");
+        options.RoutePrefix = string.Empty; // Set Swagger as homepage
+    });
 }
 
 app.UseHttpsRedirection();

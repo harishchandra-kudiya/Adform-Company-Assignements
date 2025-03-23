@@ -6332,3 +6332,1736 @@ WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();
 SELECT [c].[Id], [c].[ConversionDate], [c].[ConvertedAmount], [c].[FromCurrencyCode], [c].[FromCurrencyDesc], [c].[OriginalAmount], [c].[ToCurrencyCode], [c].[ToCurrencyDesc]
 FROM [CurrencyConversions] AS [c]
 WHERE (([c].[FromCurrencyCode] = @__fromCurrency_0) AND ([c].[ConversionDate] >= @__startDate_Value_1)) AND ([c].[ConversionDate] <= @__endDate_Value_2)
+2025-03-23 15:48:20,640 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Currency Rate Updater Service started.
+2025-03-23 15:48:20,657 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Fetching latest currency exchange rates...
+2025-03-23 15:48:21,250 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Fetching latest currency rates...
+2025-03-23 15:48:21,290 [1] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 15:48:21,292 [1] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 15:48:22,306 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7169
+2025-03-23 15:48:22,306 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5229
+2025-03-23 15:48:22,410 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-03-23 15:48:22,410 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-03-23 15:48:22,410 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\Harish\Github\Company-Assignements\Adfrom_CurrencyConversionDB\
+2025-03-23 15:48:22,718 [13] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 1422.3503ms - 200
+2025-03-23 15:48:22,719 [13] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 1457.7991ms - 200
+2025-03-23 15:48:22,742 [13] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Parsing an XML content...
+2025-03-23 15:48:22,746 [13] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
+2025-03-23 15:48:22,749 [13] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Updating currency rates in the database...
+2025-03-23 15:48:27,087 [13] INFO  Microsoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.36 initialized 'CurrencyDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-23 15:48:30,031 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (226ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,368 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,369 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,370 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,371 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,373 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,374 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,375 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,376 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,377 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,378 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,378 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,379 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,380 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,380 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,382 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,383 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,384 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,385 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,386 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,388 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,391 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,392 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,393 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,394 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,395 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,396 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,397 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,398 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,399 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,400 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,401 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:30,924 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (126ms) [Parameters=[@p1='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p3='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p5='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p7='?' (DbType = Int64), @p6='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p8='?' (DbType = DateTime2), @p11='?' (DbType = Int64), @p10='?' (DbType = DateTime2), @p13='?' (DbType = Int64), @p12='?' (DbType = DateTime2), @p15='?' (DbType = Int64), @p14='?' (DbType = DateTime2), @p17='?' (DbType = Int64), @p16='?' (DbType = DateTime2), @p19='?' (DbType = Int64), @p18='?' (DbType = DateTime2), @p21='?' (DbType = Int64), @p20='?' (DbType = DateTime2), @p23='?' (DbType = Int64), @p22='?' (DbType = DateTime2), @p25='?' (DbType = Int64), @p24='?' (DbType = DateTime2), @p27='?' (DbType = Int64), @p26='?' (DbType = DateTime2), @p29='?' (DbType = Int64), @p28='?' (DbType = DateTime2), @p31='?' (DbType = Int64), @p30='?' (DbType = DateTime2), @p33='?' (DbType = Int64), @p32='?' (DbType = DateTime2), @p35='?' (DbType = Int64), @p34='?' (DbType = DateTime2), @p37='?' (DbType = Int64), @p36='?' (DbType = DateTime2), @p39='?' (DbType = Int64), @p38='?' (DbType = DateTime2), @p41='?' (DbType = Int64), @p40='?' (DbType = DateTime2), @p43='?' (DbType = Int64), @p42='?' (DbType = DateTime2), @p45='?' (DbType = Int64), @p44='?' (DbType = DateTime2), @p47='?' (DbType = Int64), @p46='?' (DbType = DateTime2), @p49='?' (DbType = Int64), @p48='?' (DbType = DateTime2), @p51='?' (DbType = Int64), @p50='?' (DbType = DateTime2), @p53='?' (DbType = Int64), @p52='?' (DbType = DateTime2), @p55='?' (DbType = Int64), @p54='?' (DbType = DateTime2), @p57='?' (DbType = Int64), @p56='?' (DbType = DateTime2), @p59='?' (DbType = Int64), @p58='?' (DbType = DateTime2), @p61='?' (DbType = Int64), @p60='?' (DbType = DateTime2), @p63='?' (DbType = Int64), @p62='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [CurrencyRates] SET [DateTime] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p10
+WHERE [Id] = @p11;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p12
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p16
+WHERE [Id] = @p17;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p18
+WHERE [Id] = @p19;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p20
+WHERE [Id] = @p21;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p22
+WHERE [Id] = @p23;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p24
+WHERE [Id] = @p25;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p26
+WHERE [Id] = @p27;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p28
+WHERE [Id] = @p29;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p30
+WHERE [Id] = @p31;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p32
+WHERE [Id] = @p33;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p34
+WHERE [Id] = @p35;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p36
+WHERE [Id] = @p37;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p38
+WHERE [Id] = @p39;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p40
+WHERE [Id] = @p41;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p42
+WHERE [Id] = @p43;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p44
+WHERE [Id] = @p45;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p46
+WHERE [Id] = @p47;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p48
+WHERE [Id] = @p49;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p50
+WHERE [Id] = @p51;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p52
+WHERE [Id] = @p53;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p54
+WHERE [Id] = @p55;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p56
+WHERE [Id] = @p57;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p58
+WHERE [Id] = @p59;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p60
+WHERE [Id] = @p61;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p62
+WHERE [Id] = @p63;
+SELECT @@ROWCOUNT;
+2025-03-23 15:48:30,983 [6] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully updated currency rates in the database.
+2025-03-23 15:48:30,984 [6] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully fetched and saved currency rates.
+2025-03-23 15:48:30,987 [6] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Successfully updated currency exchange rates in the database.
+2025-03-23 15:48:30,987 [6] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Waiting for 60 minutes before the next update.
+2025-03-23 15:48:34,574 [4] INFO  Adfrom_CurrencyConversionDB.Controllers.CurrencyController - Fetching latest currency rates via API...
+2025-03-23 15:48:34,574 [4] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Fetching latest currency rates...
+2025-03-23 15:48:34,574 [4] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 15:48:34,574 [4] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 15:48:34,582 [13] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 8.0772ms - 200
+2025-03-23 15:48:34,582 [13] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 8.2833ms - 200
+2025-03-23 15:48:34,582 [13] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Parsing an XML content...
+2025-03-23 15:48:34,582 [13] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
+2025-03-23 15:48:34,582 [13] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Updating currency rates in the database...
+2025-03-23 15:48:34,584 [13] INFO  Microsoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.36 initialized 'CurrencyDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-23 15:48:34,596 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (10ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,602 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,609 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (6ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,611 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,613 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,619 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,624 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,626 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,628 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,631 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,633 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,635 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,640 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,642 [14] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,643 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,644 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,646 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,648 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,651 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,653 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,658 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,659 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,662 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,665 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,667 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,669 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,676 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,678 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,680 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,682 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,685 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,690 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:48:34,760 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (68ms) [Parameters=[@p1='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p3='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p5='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p7='?' (DbType = Int64), @p6='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p8='?' (DbType = DateTime2), @p11='?' (DbType = Int64), @p10='?' (DbType = DateTime2), @p13='?' (DbType = Int64), @p12='?' (DbType = DateTime2), @p15='?' (DbType = Int64), @p14='?' (DbType = DateTime2), @p17='?' (DbType = Int64), @p16='?' (DbType = DateTime2), @p19='?' (DbType = Int64), @p18='?' (DbType = DateTime2), @p21='?' (DbType = Int64), @p20='?' (DbType = DateTime2), @p23='?' (DbType = Int64), @p22='?' (DbType = DateTime2), @p25='?' (DbType = Int64), @p24='?' (DbType = DateTime2), @p27='?' (DbType = Int64), @p26='?' (DbType = DateTime2), @p29='?' (DbType = Int64), @p28='?' (DbType = DateTime2), @p31='?' (DbType = Int64), @p30='?' (DbType = DateTime2), @p33='?' (DbType = Int64), @p32='?' (DbType = DateTime2), @p35='?' (DbType = Int64), @p34='?' (DbType = DateTime2), @p37='?' (DbType = Int64), @p36='?' (DbType = DateTime2), @p39='?' (DbType = Int64), @p38='?' (DbType = DateTime2), @p41='?' (DbType = Int64), @p40='?' (DbType = DateTime2), @p43='?' (DbType = Int64), @p42='?' (DbType = DateTime2), @p45='?' (DbType = Int64), @p44='?' (DbType = DateTime2), @p47='?' (DbType = Int64), @p46='?' (DbType = DateTime2), @p49='?' (DbType = Int64), @p48='?' (DbType = DateTime2), @p51='?' (DbType = Int64), @p50='?' (DbType = DateTime2), @p53='?' (DbType = Int64), @p52='?' (DbType = DateTime2), @p55='?' (DbType = Int64), @p54='?' (DbType = DateTime2), @p57='?' (DbType = Int64), @p56='?' (DbType = DateTime2), @p59='?' (DbType = Int64), @p58='?' (DbType = DateTime2), @p61='?' (DbType = Int64), @p60='?' (DbType = DateTime2), @p63='?' (DbType = Int64), @p62='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [CurrencyRates] SET [DateTime] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p10
+WHERE [Id] = @p11;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p12
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p16
+WHERE [Id] = @p17;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p18
+WHERE [Id] = @p19;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p20
+WHERE [Id] = @p21;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p22
+WHERE [Id] = @p23;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p24
+WHERE [Id] = @p25;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p26
+WHERE [Id] = @p27;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p28
+WHERE [Id] = @p29;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p30
+WHERE [Id] = @p31;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p32
+WHERE [Id] = @p33;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p34
+WHERE [Id] = @p35;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p36
+WHERE [Id] = @p37;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p38
+WHERE [Id] = @p39;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p40
+WHERE [Id] = @p41;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p42
+WHERE [Id] = @p43;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p44
+WHERE [Id] = @p45;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p46
+WHERE [Id] = @p47;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p48
+WHERE [Id] = @p49;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p50
+WHERE [Id] = @p51;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p52
+WHERE [Id] = @p53;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p54
+WHERE [Id] = @p55;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p56
+WHERE [Id] = @p57;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p58
+WHERE [Id] = @p59;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p60
+WHERE [Id] = @p61;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p62
+WHERE [Id] = @p63;
+SELECT @@ROWCOUNT;
+2025-03-23 15:48:34,761 [9] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully updated currency rates in the database.
+2025-03-23 15:48:34,761 [9] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully fetched and saved currency rates.
+2025-03-23 15:48:34,762 [9] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Loading currency rates from database...
+2025-03-23 15:48:34,781 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (5ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+2025-03-23 15:49:19,160 [27] INFO  Adfrom_CurrencyConversionDB.Controllers.CurrencyController - Fetching latest currency rates via API...
+2025-03-23 15:49:23,128 [27] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Fetching latest currency rates...
+2025-03-23 15:50:53,847 [27] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 15:50:53,847 [27] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 15:50:54,100 [25] ERROR Adfrom_CurrencyConversionDB.Services.CurrencyService - Error while fetching currency rates
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine..
+ ---> System.Net.Sockets.SocketException (10053): An established connection was aborted by the software in your host machine.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.CreateException(SocketError error, Boolean forAsyncThrow)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ReceiveAsync(Socket socket, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.ReceiveAsync(Memory`1 buffer, SocketFlags socketFlags, Boolean fromNetworkStream, CancellationToken cancellationToken)
+   at System.Net.Sockets.NetworkStream.ReadAsync(Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext(Thread threadPoolThread)
+   at System.Threading.ThreadPool.<>c.<.cctor>b__87_0(Object state)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.InvokeContinuation(Action`1 continuation, Object state, Boolean forceAsync, Boolean requiresExecutionContextFlow)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.OnCompleted(SocketAsyncEventArgs _)
+   at System.Net.Sockets.SocketAsyncEventArgs.OnCompletedInternal()
+   at System.Net.Sockets.SocketAsyncEventArgs.<>c.<.cctor>b__179_0(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
+   at System.Threading.ThreadPoolBoundHandleOverlapped.CompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
+   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pNativeOverlapped)
+--- End of stack trace from previous location ---
+
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.<CheckUsabilityOnScavenge>g__ReadAheadWithZeroByteReadAsync|45_0()
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Adfrom_CurrencyConversionDB.Services.CurrencyService.FetchAndSaveLatestRatesAsync() in D:\Harish\Github\Company-Assignements\Adfrom_CurrencyConversionDB\Services\CurrencyService.cs:line 38
+2025-03-23 15:50:54,213 [25] ERROR Adfrom_CurrencyConversionDB.Controllers.CurrencyController - Error while fetching latest currency rates
+System.Net.Http.HttpRequestException: An error occurred while sending the request.
+ ---> System.IO.IOException: Unable to read data from the transport connection: An established connection was aborted by the software in your host machine..
+ ---> System.Net.Sockets.SocketException (10053): An established connection was aborted by the software in your host machine.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.CreateException(SocketError error, Boolean forAsyncThrow)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ReceiveAsync(Socket socket, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.ReceiveAsync(Memory`1 buffer, SocketFlags socketFlags, Boolean fromNetworkStream, CancellationToken cancellationToken)
+   at System.Net.Sockets.NetworkStream.ReadAsync(Memory`1 buffer, CancellationToken cancellationToken)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Runtime.CompilerServices.AsyncMethodBuilderCore.Start[TStateMachine](TStateMachine& stateMachine)
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Runtime.CompilerServices.AsyncTaskMethodBuilder`1.AsyncStateMachineBox`1.MoveNext(Thread threadPoolThread)
+   at System.Threading.ThreadPool.<>c.<.cctor>b__87_0(Object state)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.InvokeContinuation(Action`1 continuation, Object state, Boolean forceAsync, Boolean requiresExecutionContextFlow)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.OnCompleted(SocketAsyncEventArgs _)
+   at System.Net.Sockets.SocketAsyncEventArgs.OnCompletedInternal()
+   at System.Net.Sockets.SocketAsyncEventArgs.<>c.<.cctor>b__179_0(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
+   at System.Threading.ThreadPoolBoundHandleOverlapped.CompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
+   at System.Threading._IOCompletionCallback.PerformIOCompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* pNativeOverlapped)
+--- End of stack trace from previous location ---
+
+   --- End of inner exception stack trace ---
+   at System.Net.Security.SslStream.EnsureFullTlsFrameAsync[TIOAdapter](TIOAdapter adapter)
+   at System.Net.Security.SslStream.ReadAsyncInternal[TIOAdapter](TIOAdapter adapter, Memory`1 buffer)
+   at System.Net.Http.HttpConnection.<CheckUsabilityOnScavenge>g__ReadAheadWithZeroByteReadAsync|45_0()
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at System.Net.Http.HttpConnection.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.SendWithVersionDetectionAndRetryAsync(HttpRequestMessage request, Boolean async, Boolean doRequestAuth, CancellationToken cancellationToken)
+   at System.Net.Http.DiagnosticsHandler.SendAsyncCore(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at System.Net.Http.RedirectHandler.SendAsync(HttpRequestMessage request, Boolean async, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Microsoft.Extensions.Http.Logging.LoggingScopeHttpMessageHandler.SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+   at System.Net.Http.HttpClient.GetStringAsyncCore(HttpRequestMessage request, CancellationToken cancellationToken)
+   at Adfrom_CurrencyConversionDB.Services.CurrencyService.FetchAndSaveLatestRatesAsync() in D:\Harish\Github\Company-Assignements\Adfrom_CurrencyConversionDB\Services\CurrencyService.cs:line 38
+   at Adfrom_CurrencyConversionDB.Controllers.CurrencyController.GetLatestRates() in D:\Harish\Github\Company-Assignements\Adfrom_CurrencyConversionDB\Controllers\CurrencyController.cs:line 26
+2025-03-23 15:51:19,089 [4] INFO  Adfrom_CurrencyConversionDB.Controllers.CurrencyController - Fetching latest currency rates via API...
+2025-03-23 15:51:21,104 [4] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Fetching latest currency rates...
+2025-03-23 15:51:21,104 [4] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 15:51:21,104 [4] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 15:51:21,975 [9] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 870.8276ms - 200
+2025-03-23 15:51:21,975 [9] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 871.0322ms - 200
+2025-03-23 15:51:21,975 [9] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Parsing an XML content...
+2025-03-23 15:51:21,975 [9] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
+2025-03-23 15:51:21,975 [9] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Updating currency rates in the database...
+2025-03-23 15:51:22,041 [9] INFO  Microsoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.36 initialized 'CurrencyDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-23 15:51:22,045 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,046 [28] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,047 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,055 [31] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,056 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,057 [27] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,058 [27] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,059 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,060 [27] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,061 [31] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,062 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,063 [28] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,063 [27] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,065 [31] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,066 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,067 [28] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,068 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,068 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,069 [31] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,070 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,071 [28] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,072 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,073 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,074 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,075 [28] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,076 [31] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,077 [28] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (0ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,077 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,078 [31] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,079 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,080 [28] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,081 [31] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:51:22,392 [31] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (309ms) [Parameters=[@p1='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p3='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p5='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p7='?' (DbType = Int64), @p6='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p8='?' (DbType = DateTime2), @p11='?' (DbType = Int64), @p10='?' (DbType = DateTime2), @p13='?' (DbType = Int64), @p12='?' (DbType = DateTime2), @p15='?' (DbType = Int64), @p14='?' (DbType = DateTime2), @p17='?' (DbType = Int64), @p16='?' (DbType = DateTime2), @p19='?' (DbType = Int64), @p18='?' (DbType = DateTime2), @p21='?' (DbType = Int64), @p20='?' (DbType = DateTime2), @p23='?' (DbType = Int64), @p22='?' (DbType = DateTime2), @p25='?' (DbType = Int64), @p24='?' (DbType = DateTime2), @p27='?' (DbType = Int64), @p26='?' (DbType = DateTime2), @p29='?' (DbType = Int64), @p28='?' (DbType = DateTime2), @p31='?' (DbType = Int64), @p30='?' (DbType = DateTime2), @p33='?' (DbType = Int64), @p32='?' (DbType = DateTime2), @p35='?' (DbType = Int64), @p34='?' (DbType = DateTime2), @p37='?' (DbType = Int64), @p36='?' (DbType = DateTime2), @p39='?' (DbType = Int64), @p38='?' (DbType = DateTime2), @p41='?' (DbType = Int64), @p40='?' (DbType = DateTime2), @p43='?' (DbType = Int64), @p42='?' (DbType = DateTime2), @p45='?' (DbType = Int64), @p44='?' (DbType = DateTime2), @p47='?' (DbType = Int64), @p46='?' (DbType = DateTime2), @p49='?' (DbType = Int64), @p48='?' (DbType = DateTime2), @p51='?' (DbType = Int64), @p50='?' (DbType = DateTime2), @p53='?' (DbType = Int64), @p52='?' (DbType = DateTime2), @p55='?' (DbType = Int64), @p54='?' (DbType = DateTime2), @p57='?' (DbType = Int64), @p56='?' (DbType = DateTime2), @p59='?' (DbType = Int64), @p58='?' (DbType = DateTime2), @p61='?' (DbType = Int64), @p60='?' (DbType = DateTime2), @p63='?' (DbType = Int64), @p62='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [CurrencyRates] SET [DateTime] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p10
+WHERE [Id] = @p11;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p12
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p16
+WHERE [Id] = @p17;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p18
+WHERE [Id] = @p19;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p20
+WHERE [Id] = @p21;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p22
+WHERE [Id] = @p23;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p24
+WHERE [Id] = @p25;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p26
+WHERE [Id] = @p27;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p28
+WHERE [Id] = @p29;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p30
+WHERE [Id] = @p31;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p32
+WHERE [Id] = @p33;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p34
+WHERE [Id] = @p35;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p36
+WHERE [Id] = @p37;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p38
+WHERE [Id] = @p39;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p40
+WHERE [Id] = @p41;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p42
+WHERE [Id] = @p43;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p44
+WHERE [Id] = @p45;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p46
+WHERE [Id] = @p47;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p48
+WHERE [Id] = @p49;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p50
+WHERE [Id] = @p51;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p52
+WHERE [Id] = @p53;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p54
+WHERE [Id] = @p55;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p56
+WHERE [Id] = @p57;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p58
+WHERE [Id] = @p59;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p60
+WHERE [Id] = @p61;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p62
+WHERE [Id] = @p63;
+SELECT @@ROWCOUNT;
+2025-03-23 15:51:22,424 [31] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully updated currency rates in the database.
+2025-03-23 15:51:22,424 [31] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully fetched and saved currency rates.
+2025-03-23 15:51:22,424 [31] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Loading currency rates from database...
+2025-03-23 15:51:22,427 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+2025-03-23 15:55:11,352 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Currency Rate Updater Service started.
+2025-03-23 15:55:11,369 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Fetching latest currency exchange rates...
+2025-03-23 15:55:16,483 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Fetching latest currency rates...
+2025-03-23 15:55:16,531 [1] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 15:55:16,535 [1] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 15:55:16,930 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7169
+2025-03-23 15:55:16,930 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5229
+2025-03-23 15:55:17,004 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-03-23 15:55:17,005 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-03-23 15:55:17,005 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\Harish\Github\Company-Assignements\Adfrom_CurrencyConversionDB\
+2025-03-23 15:55:18,234 [7] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 1694.7809ms - 200
+2025-03-23 15:55:18,237 [7] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 1743.108ms - 200
+2025-03-23 15:55:18,383 [7] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Parsing an XML content...
+2025-03-23 15:55:18,389 [7] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
+2025-03-23 15:55:18,392 [7] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Updating currency rates in the database...
+2025-03-23 15:55:21,205 [7] INFO  Microsoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.36 initialized 'CurrencyDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-23 15:55:23,184 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (155ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,431 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (7ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,432 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,434 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,435 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,437 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,438 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,439 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,440 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,441 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,442 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,447 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (4ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,448 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,449 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,451 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,453 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,454 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,456 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,457 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,458 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,461 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,463 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,465 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,466 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,467 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,469 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,470 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,471 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,472 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,474 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,476 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,477 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 15:55:23,818 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (98ms) [Parameters=[@p1='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p3='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p5='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p7='?' (DbType = Int64), @p6='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p8='?' (DbType = DateTime2), @p11='?' (DbType = Int64), @p10='?' (DbType = DateTime2), @p13='?' (DbType = Int64), @p12='?' (DbType = DateTime2), @p15='?' (DbType = Int64), @p14='?' (DbType = DateTime2), @p17='?' (DbType = Int64), @p16='?' (DbType = DateTime2), @p19='?' (DbType = Int64), @p18='?' (DbType = DateTime2), @p21='?' (DbType = Int64), @p20='?' (DbType = DateTime2), @p23='?' (DbType = Int64), @p22='?' (DbType = DateTime2), @p25='?' (DbType = Int64), @p24='?' (DbType = DateTime2), @p27='?' (DbType = Int64), @p26='?' (DbType = DateTime2), @p29='?' (DbType = Int64), @p28='?' (DbType = DateTime2), @p31='?' (DbType = Int64), @p30='?' (DbType = DateTime2), @p33='?' (DbType = Int64), @p32='?' (DbType = DateTime2), @p35='?' (DbType = Int64), @p34='?' (DbType = DateTime2), @p37='?' (DbType = Int64), @p36='?' (DbType = DateTime2), @p39='?' (DbType = Int64), @p38='?' (DbType = DateTime2), @p41='?' (DbType = Int64), @p40='?' (DbType = DateTime2), @p43='?' (DbType = Int64), @p42='?' (DbType = DateTime2), @p45='?' (DbType = Int64), @p44='?' (DbType = DateTime2), @p47='?' (DbType = Int64), @p46='?' (DbType = DateTime2), @p49='?' (DbType = Int64), @p48='?' (DbType = DateTime2), @p51='?' (DbType = Int64), @p50='?' (DbType = DateTime2), @p53='?' (DbType = Int64), @p52='?' (DbType = DateTime2), @p55='?' (DbType = Int64), @p54='?' (DbType = DateTime2), @p57='?' (DbType = Int64), @p56='?' (DbType = DateTime2), @p59='?' (DbType = Int64), @p58='?' (DbType = DateTime2), @p61='?' (DbType = Int64), @p60='?' (DbType = DateTime2), @p63='?' (DbType = Int64), @p62='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [CurrencyRates] SET [DateTime] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p10
+WHERE [Id] = @p11;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p12
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p16
+WHERE [Id] = @p17;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p18
+WHERE [Id] = @p19;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p20
+WHERE [Id] = @p21;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p22
+WHERE [Id] = @p23;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p24
+WHERE [Id] = @p25;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p26
+WHERE [Id] = @p27;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p28
+WHERE [Id] = @p29;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p30
+WHERE [Id] = @p31;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p32
+WHERE [Id] = @p33;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p34
+WHERE [Id] = @p35;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p36
+WHERE [Id] = @p37;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p38
+WHERE [Id] = @p39;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p40
+WHERE [Id] = @p41;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p42
+WHERE [Id] = @p43;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p44
+WHERE [Id] = @p45;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p46
+WHERE [Id] = @p47;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p48
+WHERE [Id] = @p49;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p50
+WHERE [Id] = @p51;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p52
+WHERE [Id] = @p53;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p54
+WHERE [Id] = @p55;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p56
+WHERE [Id] = @p57;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p58
+WHERE [Id] = @p59;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p60
+WHERE [Id] = @p61;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p62
+WHERE [Id] = @p63;
+SELECT @@ROWCOUNT;
+2025-03-23 15:55:23,889 [10] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully updated currency rates in the database.
+2025-03-23 15:55:23,889 [10] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully fetched and saved currency rates.
+2025-03-23 15:55:23,894 [10] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Successfully updated currency exchange rates in the database.
+2025-03-23 15:55:23,894 [10] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Waiting for 60 minutes before the next update.
+2025-03-23 16:25:30,762 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Currency Rate Updater Service started.
+2025-03-23 16:25:30,774 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Fetching latest currency exchange rates...
+2025-03-23 16:25:31,186 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Fetching latest currency rates...
+2025-03-23 16:25:31,205 [1] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 16:25:31,206 [1] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 16:25:31,585 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7169
+2025-03-23 16:25:31,585 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5229
+2025-03-23 16:25:31,651 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-03-23 16:25:31,651 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-03-23 16:25:31,652 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\Harish\Github\Company-Assignements\Adfrom_CurrencyConversionDB\
+2025-03-23 16:25:32,332 [14] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 1120.8393ms - 200
+2025-03-23 16:25:32,334 [14] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 1142.9556ms - 200
+2025-03-23 16:25:32,543 [14] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Parsing an XML content...
+2025-03-23 16:25:32,550 [14] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
+2025-03-23 16:25:32,553 [14] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Updating currency rates in the database...
+2025-03-23 16:25:36,230 [14] INFO  Microsoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.36 initialized 'CurrencyDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-23 16:25:37,757 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (105ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,963 [13] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (9ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,964 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,966 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,968 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,969 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,970 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,972 [13] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,973 [13] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,974 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,975 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,977 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,978 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,980 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,981 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,983 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,984 [13] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,985 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,986 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,987 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,989 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,990 [13] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,991 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,992 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,994 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,995 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,996 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:37,998 [15] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:38,001 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:38,002 [13] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:38,004 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:38,005 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:25:38,256 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (28ms) [Parameters=[@p1='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p3='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p5='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p7='?' (DbType = Int64), @p6='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p8='?' (DbType = DateTime2), @p11='?' (DbType = Int64), @p10='?' (DbType = DateTime2), @p13='?' (DbType = Int64), @p12='?' (DbType = DateTime2), @p15='?' (DbType = Int64), @p14='?' (DbType = DateTime2), @p17='?' (DbType = Int64), @p16='?' (DbType = DateTime2), @p19='?' (DbType = Int64), @p18='?' (DbType = DateTime2), @p21='?' (DbType = Int64), @p20='?' (DbType = DateTime2), @p23='?' (DbType = Int64), @p22='?' (DbType = DateTime2), @p25='?' (DbType = Int64), @p24='?' (DbType = DateTime2), @p27='?' (DbType = Int64), @p26='?' (DbType = DateTime2), @p29='?' (DbType = Int64), @p28='?' (DbType = DateTime2), @p31='?' (DbType = Int64), @p30='?' (DbType = DateTime2), @p33='?' (DbType = Int64), @p32='?' (DbType = DateTime2), @p35='?' (DbType = Int64), @p34='?' (DbType = DateTime2), @p37='?' (DbType = Int64), @p36='?' (DbType = DateTime2), @p39='?' (DbType = Int64), @p38='?' (DbType = DateTime2), @p41='?' (DbType = Int64), @p40='?' (DbType = DateTime2), @p43='?' (DbType = Int64), @p42='?' (DbType = DateTime2), @p45='?' (DbType = Int64), @p44='?' (DbType = DateTime2), @p47='?' (DbType = Int64), @p46='?' (DbType = DateTime2), @p49='?' (DbType = Int64), @p48='?' (DbType = DateTime2), @p51='?' (DbType = Int64), @p50='?' (DbType = DateTime2), @p53='?' (DbType = Int64), @p52='?' (DbType = DateTime2), @p55='?' (DbType = Int64), @p54='?' (DbType = DateTime2), @p57='?' (DbType = Int64), @p56='?' (DbType = DateTime2), @p59='?' (DbType = Int64), @p58='?' (DbType = DateTime2), @p61='?' (DbType = Int64), @p60='?' (DbType = DateTime2), @p63='?' (DbType = Int64), @p62='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [CurrencyRates] SET [DateTime] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p10
+WHERE [Id] = @p11;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p12
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p16
+WHERE [Id] = @p17;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p18
+WHERE [Id] = @p19;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p20
+WHERE [Id] = @p21;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p22
+WHERE [Id] = @p23;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p24
+WHERE [Id] = @p25;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p26
+WHERE [Id] = @p27;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p28
+WHERE [Id] = @p29;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p30
+WHERE [Id] = @p31;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p32
+WHERE [Id] = @p33;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p34
+WHERE [Id] = @p35;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p36
+WHERE [Id] = @p37;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p38
+WHERE [Id] = @p39;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p40
+WHERE [Id] = @p41;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p42
+WHERE [Id] = @p43;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p44
+WHERE [Id] = @p45;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p46
+WHERE [Id] = @p47;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p48
+WHERE [Id] = @p49;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p50
+WHERE [Id] = @p51;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p52
+WHERE [Id] = @p53;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p54
+WHERE [Id] = @p55;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p56
+WHERE [Id] = @p57;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p58
+WHERE [Id] = @p59;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p60
+WHERE [Id] = @p61;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p62
+WHERE [Id] = @p63;
+SELECT @@ROWCOUNT;
+2025-03-23 16:25:38,302 [6] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully updated currency rates in the database.
+2025-03-23 16:25:38,302 [6] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully fetched and saved currency rates.
+2025-03-23 16:25:38,306 [6] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Successfully updated currency exchange rates in the database.
+2025-03-23 16:25:38,306 [6] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Waiting for 60 minutes before the next update.
+2025-03-23 16:42:18,671 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Currency Rate Updater Service started.
+2025-03-23 16:42:18,686 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Fetching latest currency exchange rates...
+2025-03-23 16:42:19,160 [1] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Fetching latest currency rates...
+2025-03-23 16:42:19,193 [1] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - Start processing HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 16:42:19,195 [1] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Sending HTTP request GET https://www.nationalbanken.dk/api/currencyratesxml?lang=en
+2025-03-23 16:42:20,241 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: https://localhost:7169
+2025-03-23 16:42:20,241 [1] INFO  Microsoft.Hosting.Lifetime - Now listening on: http://localhost:5229
+2025-03-23 16:42:20,362 [1] INFO  Microsoft.Hosting.Lifetime - Application started. Press Ctrl+C to shut down.
+2025-03-23 16:42:20,366 [1] INFO  Microsoft.Hosting.Lifetime - Hosting environment: Development
+2025-03-23 16:42:20,366 [1] INFO  Microsoft.Hosting.Lifetime - Content root path: D:\Harish\Github\Company-Assignements\Adfrom_CurrencyConversionDB\
+2025-03-23 16:42:20,993 [11] INFO  System.Net.Http.HttpClient.Default.ClientHandler - Received HTTP response headers after 1786.2566ms - 200
+2025-03-23 16:42:21,000 [11] INFO  System.Net.Http.HttpClient.Default.LogicalHandler - End processing HTTP request after 1831.7749ms - 200
+2025-03-23 16:42:21,511 [11] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Parsing an XML content...
+2025-03-23 16:42:21,520 [11] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Base currency changed from DKK to INR. INR Rate: 8.01
+2025-03-23 16:42:21,524 [11] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Updating currency rates in the database...
+2025-03-23 16:42:26,488 [11] INFO  Microsoft.EntityFrameworkCore.Infrastructure - Entity Framework Core 6.0.36 initialized 'CurrencyDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.36' with options: None
+2025-03-23 16:42:29,697 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (427ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,123 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (15ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,151 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (26ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,190 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (38ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,206 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (15ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,209 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,210 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,211 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,223 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,224 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,226 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,227 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,230 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (3ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,232 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,233 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,234 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,235 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,237 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,238 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,240 [16] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,240 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,242 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,244 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (2ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,245 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,247 [6] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,249 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,251 [10] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,252 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,253 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,255 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,256 [4] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,257 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (1ms) [Parameters=[@__rate_CurrencyCode_0='?' (Size = 4000)], CommandType='Text', CommandTimeout='30']
+SELECT TOP(1) [c].[Id], [c].[CurrencyCode], [c].[CurrencyDesc], [c].[DateTime], [c].[Rate]
+FROM [CurrencyRates] AS [c]
+WHERE [c].[CurrencyCode] = @__rate_CurrencyCode_0
+2025-03-23 16:42:30,659 [9] INFO  Microsoft.EntityFrameworkCore.Database.Command - Executed DbCommand (77ms) [Parameters=[@p1='?' (DbType = Int64), @p0='?' (DbType = DateTime2), @p3='?' (DbType = Int64), @p2='?' (DbType = DateTime2), @p5='?' (DbType = Int64), @p4='?' (DbType = DateTime2), @p7='?' (DbType = Int64), @p6='?' (DbType = DateTime2), @p9='?' (DbType = Int64), @p8='?' (DbType = DateTime2), @p11='?' (DbType = Int64), @p10='?' (DbType = DateTime2), @p13='?' (DbType = Int64), @p12='?' (DbType = DateTime2), @p15='?' (DbType = Int64), @p14='?' (DbType = DateTime2), @p17='?' (DbType = Int64), @p16='?' (DbType = DateTime2), @p19='?' (DbType = Int64), @p18='?' (DbType = DateTime2), @p21='?' (DbType = Int64), @p20='?' (DbType = DateTime2), @p23='?' (DbType = Int64), @p22='?' (DbType = DateTime2), @p25='?' (DbType = Int64), @p24='?' (DbType = DateTime2), @p27='?' (DbType = Int64), @p26='?' (DbType = DateTime2), @p29='?' (DbType = Int64), @p28='?' (DbType = DateTime2), @p31='?' (DbType = Int64), @p30='?' (DbType = DateTime2), @p33='?' (DbType = Int64), @p32='?' (DbType = DateTime2), @p35='?' (DbType = Int64), @p34='?' (DbType = DateTime2), @p37='?' (DbType = Int64), @p36='?' (DbType = DateTime2), @p39='?' (DbType = Int64), @p38='?' (DbType = DateTime2), @p41='?' (DbType = Int64), @p40='?' (DbType = DateTime2), @p43='?' (DbType = Int64), @p42='?' (DbType = DateTime2), @p45='?' (DbType = Int64), @p44='?' (DbType = DateTime2), @p47='?' (DbType = Int64), @p46='?' (DbType = DateTime2), @p49='?' (DbType = Int64), @p48='?' (DbType = DateTime2), @p51='?' (DbType = Int64), @p50='?' (DbType = DateTime2), @p53='?' (DbType = Int64), @p52='?' (DbType = DateTime2), @p55='?' (DbType = Int64), @p54='?' (DbType = DateTime2), @p57='?' (DbType = Int64), @p56='?' (DbType = DateTime2), @p59='?' (DbType = Int64), @p58='?' (DbType = DateTime2), @p61='?' (DbType = Int64), @p60='?' (DbType = DateTime2), @p63='?' (DbType = Int64), @p62='?' (DbType = DateTime2)], CommandType='Text', CommandTimeout='30']
+SET NOCOUNT ON;
+UPDATE [CurrencyRates] SET [DateTime] = @p0
+WHERE [Id] = @p1;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p2
+WHERE [Id] = @p3;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p4
+WHERE [Id] = @p5;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p6
+WHERE [Id] = @p7;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p8
+WHERE [Id] = @p9;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p10
+WHERE [Id] = @p11;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p12
+WHERE [Id] = @p13;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p14
+WHERE [Id] = @p15;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p16
+WHERE [Id] = @p17;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p18
+WHERE [Id] = @p19;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p20
+WHERE [Id] = @p21;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p22
+WHERE [Id] = @p23;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p24
+WHERE [Id] = @p25;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p26
+WHERE [Id] = @p27;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p28
+WHERE [Id] = @p29;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p30
+WHERE [Id] = @p31;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p32
+WHERE [Id] = @p33;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p34
+WHERE [Id] = @p35;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p36
+WHERE [Id] = @p37;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p38
+WHERE [Id] = @p39;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p40
+WHERE [Id] = @p41;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p42
+WHERE [Id] = @p43;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p44
+WHERE [Id] = @p45;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p46
+WHERE [Id] = @p47;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p48
+WHERE [Id] = @p49;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p50
+WHERE [Id] = @p51;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p52
+WHERE [Id] = @p53;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p54
+WHERE [Id] = @p55;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p56
+WHERE [Id] = @p57;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p58
+WHERE [Id] = @p59;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p60
+WHERE [Id] = @p61;
+SELECT @@ROWCOUNT;
+
+UPDATE [CurrencyRates] SET [DateTime] = @p62
+WHERE [Id] = @p63;
+SELECT @@ROWCOUNT;
+2025-03-23 16:42:30,751 [9] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully updated currency rates in the database.
+2025-03-23 16:42:30,752 [9] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyService - Successfully fetched and saved currency rates.
+2025-03-23 16:42:30,757 [9] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Successfully updated currency exchange rates in the database.
+2025-03-23 16:42:30,757 [9] INFO  Adfrom_CurrencyConversionDB.Services.CurrencyRateUpdaterService - Waiting for 60 minutes before the next update.
