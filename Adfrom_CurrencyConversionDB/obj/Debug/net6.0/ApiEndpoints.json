@@ -1,0 +1,70 @@
+[
+  {
+    "ContainingType": "Adfrom_CurrencyConversionDB.Controllers.CurrencyController",
+    "Method": "ConvertCurrency",
+    "RelativePath": "api/currency/convert-currency-rate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "Adfrom_CurrencyConversionDB.Models.CurrencyConversionRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Adfrom_CurrencyConversionDB.Controllers.CurrencyController",
+    "Method": "GetLatestRates",
+    "RelativePath": "api/currency/fetch-all-latest-currency-rates",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Adfrom_CurrencyConversionDB.Controllers.CurrencyController",
+    "Method": "GetCurrencyRate",
+    "RelativePath": "api/currency/get-currency-rate/{currencyCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "currencyCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "Adfrom_CurrencyConversionDB.Controllers.CurrencyController",
+    "Method": "GetStoredConversions",
+    "RelativePath": "api/currency/get-stored-conversions",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "fromCurrency",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "startDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      },
+      {
+        "Name": "endDate",
+        "Type": "System.Nullable\u00601[[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
