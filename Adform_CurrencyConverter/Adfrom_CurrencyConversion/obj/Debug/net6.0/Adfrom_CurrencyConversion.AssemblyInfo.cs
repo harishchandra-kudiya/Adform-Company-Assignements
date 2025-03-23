@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Adfrom_CurrencyConversion")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d1d0adeb19b9d130361529f2cfb4ab5355539418")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2023a53a98a47f0a96eb5c27442ac59725332c20")]
 [assembly: System.Reflection.AssemblyProductAttribute("Adfrom_CurrencyConversion")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Adfrom_CurrencyConversion")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

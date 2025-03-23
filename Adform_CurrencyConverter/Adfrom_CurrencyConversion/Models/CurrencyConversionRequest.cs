@@ -21,7 +21,7 @@ namespace Adfrom_CurrencyConversion.Models
 
         [Required(ErrorMessage = "Amount is required.")]
         [Range(0.01, double.MaxValue, ErrorMessage = "Amount must be a greater than zero.")]
-        [DefaultValue(100.00)]
-        public decimal Amount { get; set; } = 100.00m;
+        [DefaultValue(100.0000)]
+        public decimal Amount { get; set; } = 100.0000m;
     }
 }

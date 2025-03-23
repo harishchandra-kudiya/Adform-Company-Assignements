@@ -55,7 +55,7 @@ namespace Adfrom_CurrencyConversion.Services
         /// <exception cref="Exception">Thrown if the INR rate is not found in the XML.</exception>
         private List<CurrencyRate> ParseXml(string xmlContent)
         {
-            try 
+            try
             {
                 _logger.Info("Parsing an XML content...");
                 var doc = XDocument.Parse(xmlContent); // Parse the XML content
@@ -74,7 +74,7 @@ namespace Adfrom_CurrencyConversion.Services
                     {
                         CurrencyCode = x.Attribute("code").Value,
                         CurrencyDesc = x.Attribute("desc").Value,
-                        Rate = Math.Round(decimal.Parse(x.Attribute("rate").Value, CultureInfo.InvariantCulture) / inrRate , 2),
+                        Rate = Math.Round(decimal.Parse(x.Attribute("rate").Value, CultureInfo.InvariantCulture) / inrRate , 4),
                         DateTime = DateTime.UtcNow.ToString("yyyy-MMM-dd hh:mm:ss:ff tt")
                     }).ToList();
 
@@ -83,7 +83,7 @@ namespace Adfrom_CurrencyConversion.Services
                 {
                     CurrencyCode = "DKK",
                     CurrencyDesc = "Danish Krone",
-                    Rate = inrRate,
+                    Rate = Math.Round(1 / inrRate, 4),
                     DateTime = DateTime.UtcNow.ToString("yyyy-MMM-dd hh:mm:ss:ff tt")
                 });
 
@@ -172,10 +172,10 @@ namespace Adfrom_CurrencyConversion.Services
 
             return new CurrencyRateResponse
             {
-                BaseCurrencyCode = "INR",
+                BaseCurrencyCode = currencyCode,
                 BaseCurrencyAmount = 1,
-                ConvertedCurrencyCode = currencyCode,
-                ConvertedCurrencyAmount = Math.Round(currencyRate.Rate, 2)
+                ConvertedCurrencyCode = "INR",
+                ConvertedCurrencyAmount = Math.Round(currencyRate.Rate, 4)
             };
         }
 
@@ -221,7 +221,7 @@ namespace Adfrom_CurrencyConversion.Services
                     ToCurrencyCode = request.ToCurrencyCode,
                     ToCurrencyDesc = toRate.CurrencyDesc,
                     OriginalAmount = request.Amount,
-                    ConvertedAmount = Math.Round(convertedAmount, 2)
+                    ConvertedAmount = Math.Round(convertedAmount, 4)
                 };
             }
             catch (Exception ex)

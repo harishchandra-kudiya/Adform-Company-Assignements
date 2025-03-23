@@ -1,5 +1,6 @@
 ﻿using Adfrom_CurrencyConversion.Interfaces;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Adfrom_CurrencyConversion.Models
 {
@@ -15,7 +16,10 @@ namespace Adfrom_CurrencyConversion.Models
 
         public string? ToCurrencyDesc { get; set; }
 
+        [Column(TypeName = "decimal(18,4)")]
         public decimal OriginalAmount { get; set; }
+
+        [Column(TypeName = "decimal(18,4)")]
         public decimal ConvertedAmount { get; set; }
 
     }
